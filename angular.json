@@ -27,6 +27,7 @@
               "src/styles.css"
             ],
             "scripts": []
+
           },
           "configurations": {
             "production": {
@@ -98,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

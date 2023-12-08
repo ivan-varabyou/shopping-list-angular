@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row">
+  <div class="col-xs-12">
+    <input type="text" [(ngModel)]="name">
+    <h1>{{ name }}</h1>
+    <div app-server></div>
+    <div id="app-servers"></div>
+    <label for="user">Username</label>
+    <input type="text" id="user" class="form-control" [(ngModel)]="username"/>
+    <p>{{username}}</p>
+    <button class="btn btn-primary" [disabled]="!username" (click)="username = ''">Reset User</button>
+  </div>
+
+  </div>
+</div>

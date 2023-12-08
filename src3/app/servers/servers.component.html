@@ -1,0 +1,19 @@
+<label for="sever">Server Name EVENT</label>
+<input type="text" class="form-control" id="sever" (input)="onUpdateServerName($event)"/>
+<label for="sever">Server Name Two Binding</label>
+<input type="text" class="form-control"  [(ngModel)]="serverName"/>
+<button class="btn btn-primary" [disabled]="!serverName" (click)="onCreateServer()" >Add server</button>
+<h5 >Outup</h5>
+<p *ngIf="allowNewServer; else noServer">Server was created, server name is {{serverName}}</p>
+
+
+
+<input type="text" [(ngModel)]="workerId">
+<button (click)='getData()'>getData worker</button>
+<ng-template #noServer >
+</ng-template>
+  <ul [ngStyle]="{backgroundColor: getBackground(), 'font-size': '18px'}" [ngClass]="{more: workerId > 10}">
+    <li *ngFor="let item of workerData; trackBy:trackById; let i = index" >{{i}}. {{item.name}}</li>
+  </ul>
+
+
